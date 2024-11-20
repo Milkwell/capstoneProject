@@ -4,7 +4,7 @@ import Page from './page.js';
 class SuppliesSelector extends Page {
 
     get dropDownTab () {
-        return $('div[class="sc-15d3e3b1-4 ifYKqP"]');
+        return $('a[class="sc-15d3e3b1-1 sc-15d3e3b1-3 eOOysd fXrPWM h-margin-l-wide"]');
     }
     get btnSupplies () {
         return $('a[data-id="5xsxr"]');
