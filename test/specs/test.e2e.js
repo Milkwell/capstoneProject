@@ -1,15 +1,15 @@
 import { expect } from '@wdio/globals'
-import LoginPage from '../pageobjects/login.page.js'
-import SecurePage from '../pageobjects/secure.page.js'
+import SuppliesSelector from '../pageobjects/workSupplies.js'
+import SecurePage from '../pageobjects/pageChecker.js'
 
-describe('My Login application', () => {
-    it('should login with valid credentials', async () => {
-        await LoginPage.open()
+describe('This is', () => {
+    it('step one', async () => {
+        await SuppliesSelector.open()
 
-        await LoginPage.login('tomsmith', 'SuperSecretPassword!')
+        await SuppliesSelector.select()
         await expect(SecurePage.flashAlert).toBeExisting()
         await expect(SecurePage.flashAlert).toHaveText(
-            expect.stringContaining('You logged into a secure area!'))
+            expect.stringContaining('Pens'))
     })
 })
 
