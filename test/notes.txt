@@ -1,0 +1,7 @@
+    get btnLater () {
+        return $('button[class="sc-ddc722c0-0 sc-3d5333d1-0 jKTcnK hhYRAp"]');
+    } 
+
+    await this.btnLater.click();
+
+this is for when the button may re-appear 

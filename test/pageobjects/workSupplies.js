@@ -1,10 +1,10 @@
 import { $ } from '@wdio/globals'
 import Page from './page.js';
 
-class SuppliesSelector extends Page {
+class SuppliesSelector {
 
     get dropDownTab () {
-        return $('a[class="sc-15d3e3b1-1 sc-15d3e3b1-3 eOOysd fXrPWM h-margin-l-wide"]');
+        return $('a[aria-label="Categories"]');
     }
     get btnSupplies () {
         return $('a[data-id="5xsxr"]');
@@ -19,9 +19,6 @@ class SuppliesSelector extends Page {
         await this.btnPens.click();
     }
 
-    open () {
-        return super.open();
-    }
 }
 
 export default new SuppliesSelector();

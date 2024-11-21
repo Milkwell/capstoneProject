@@ -4,7 +4,7 @@ import Page from './page.js';
 class SecurePage extends Page {
 
     get flashAlert () {
-        return $('h1[class="sc-fe064f5c-0 dtCtuk"]');
+        return $('a[aria-label="Target home"]');
     }
 }
 

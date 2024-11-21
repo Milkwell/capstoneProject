@@ -1,7 +1,8 @@
 import { browser } from '@wdio/globals'
 
 export default class Page {
-    open () {
-        return browser.url(`https://www.target.com/`)
+    async open () {
+         await browser.url(`https://www.target.com/`); 
+         await browser.maximizeWindow();
     }
 }

@@ -1,15 +1,14 @@
 import { expect } from '@wdio/globals'
-import SuppliesSelector from '../pageobjects/workSupplies.js'
+import LoginPage from '../pageobjects/login.js'
 import SecurePage from '../pageobjects/pageChecker.js'
 
 describe('This is', () => {
     it('step one', async () => {
-        await SuppliesSelector.open()
+        await LoginPage.open()
 
-        await SuppliesSelector.select()
+        await LoginPage.login('maxwellhilmo@gmail.com' ,'19778264mH!')
         await expect(SecurePage.flashAlert).toBeExisting()
-        await expect(SecurePage.flashAlert).toHaveText(
-            expect.stringContaining('Pens'))
+        
     })
 })
 
