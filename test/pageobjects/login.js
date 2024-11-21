@@ -31,6 +31,9 @@ class LoginPage extends Page {
         await this.inputPassword.setValue(password);
         await this.btnSubmit.click();
     }
+    get flashAlert () {
+        return $('a[aria-label="Target home"]');
+    }
 }
 
 export default new LoginPage();

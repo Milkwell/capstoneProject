@@ -5,3 +5,17 @@
     await this.btnLater.click();
 
 this is for when the button may re-appear 
+
+import { $ } from '@wdio/globals'
+import Page from './page.js';
+
+class SecurePage extends Page {
+
+    get flashAlert () {
+        return $('a[aria-label="Target home"]');
+    }
+}
+
+export default new SecurePage();
+
+the origonal page checker
