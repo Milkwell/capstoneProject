@@ -2,7 +2,7 @@ import { expect } from '@wdio/globals'
 import LoginPage from '../pageobjects/login.js'
 import PickupSelector from '../pageobjects/pickupSelector.js'
 import DeliverySelector from '../pageobjects/orderSelector.js'
-//import SuppliesSelector from '../pageobjects/workSupplies.js'
+import SearchPens from '../pageobjects/searchBar.js'
 
 describe('This is', () => {
     it('step one', async () => {
@@ -23,10 +23,10 @@ describe('This is', () => {
     })
 })
 
-/* describe('This is', () => {
-    it('step two', async () => {
-        await SuppliesSelector.select()
+describe('This is', () => {
+    it('step three', async () => {
+        await SearchPens.select('pens')
 
-        await expect(SuppliesSelector.flashAlert).toBeExisting()
+        await expect(SearchPens.flashAlert).toBeExisting()
     })
-}) */
+})

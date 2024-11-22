@@ -19,3 +19,9 @@ class SecurePage extends Page {
 export default new SecurePage();
 
 the origonal page checker
+
+import { Key } from 'webdriverio'
+
+await browser.keys([Key.Enter]);
+
+the function to press the 'return key'
