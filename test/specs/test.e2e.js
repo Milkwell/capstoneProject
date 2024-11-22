@@ -3,6 +3,7 @@ import LoginPage from '../pageobjects/login.js'
 import PickupSelector from '../pageobjects/pickupSelector.js'
 import DeliverySelector from '../pageobjects/orderSelector.js'
 import SearchPens from '../pageobjects/searchBar.js'
+import ItemSelector from '../pageobjects/addToCart.js'
 
 describe('This is', () => {
     it('step one', async () => {
@@ -28,5 +29,13 @@ describe('This is', () => {
         await SearchPens.select('pens')
 
         await expect(SearchPens.flashAlert).toBeExisting()
+    })
+})
+
+describe('This is', () => {
+    it('step four', async () => {
+        await ItemSelector.select()
+
+        await expect(ItemSelector.flashAlert).toBeExisting()
     })
 })
