@@ -4,6 +4,7 @@ import PickupSelector from '../pageobjects/pickupSelector.js'
 import DeliverySelector from '../pageobjects/orderSelector.js'
 import SearchPens from '../pageobjects/searchBar.js'
 import ItemSelector from '../pageobjects/addToCart.js'
+import FavoriteSelector from '../pageobjects/addToFavorites.js'
 
 describe('This is', () => {
     it('step one', async () => {
@@ -37,5 +38,13 @@ describe('This is', () => {
         await ItemSelector.select()
 
         await expect(ItemSelector.flashAlert).toBeExisting()
+    })
+}) 
+
+describe('This is', () => {
+    it('step five', async () => {
+        await FavoriteSelector.select('gaming headset')
+
+        await expect(FavoriteSelector.flashAlert).toBeExisting()
     })
 })

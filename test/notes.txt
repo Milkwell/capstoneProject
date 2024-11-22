@@ -25,3 +25,11 @@ import { Key } from 'webdriverio'
 await browser.keys([Key.Enter]);
 
 the function to press the 'return key'
+
+    get favoriteSelect () {
+        return $('button[aria-label="favorite Yoobi Novelty Ballpoint Pen Gingerbread Scarf: 1.0mm Black Ink, Art Stationery, Office Supplies to keep tabs on it"]');
+    }
+
+        await this.favoriteSelect.click();
+
+adding stuff to your favorite list
